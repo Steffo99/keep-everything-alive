@@ -75,27 +75,29 @@ public class GameController : MonoBehaviour
 
     public List<MicrogameController> microgames;
     private MicrogameController currentMicrogame;
-    public delegate void OnMicrogameStartHandler(MicrogameController newMicrogame);
-    public event OnMicrogameStartHandler OnMicrogameStart;
-    public delegate void OnMicrogameEndHandler(MicrogameController endedMicrogame);
-    public event OnMicrogameEndHandler OnMicrogameEnd;
+    public delegate void OnMicrogameCreateHandler(MicrogameController newMicrogame);
+    public event OnMicrogameCreateHandler OnMicrogameCreate;
+    public delegate void OnMicrogameDestroyHandler(MicrogameController endedMicrogame);
+    public event OnMicrogameDestroyHandler OnMicrogameDestroy;
     public MicrogameController CurrentMicrogame {
         get {
             return currentMicrogame;
         }
-        set {
-            OnMicrogameTimeLeftChange?.Invoke(CurrentMicrogame?.TimeLeft, value?.TimeLeft);
-            
+        set {            
             if(CurrentMicrogame != null) {
-                OnMicrogameEnd?.Invoke(CurrentMicrogame);
+                OnMicrogameDestroy?.Invoke(CurrentMicrogame);
                 CurrentMicrogame.OnTimeLeftChange -= PropagateTimeLeftChange;
+                CurrentMicrogame.OnMicrogameEnd -= OnMicrogameEnd;
                 Destroy(CurrentMicrogame.gameObject);
             }
             if(value != null) {
                 currentMicrogame = Instantiate(value.gameObject, transform).GetComponent<MicrogameController>();
                 CurrentMicrogame.OnTimeLeftChange += PropagateTimeLeftChange;
-                OnMicrogameStart?.Invoke(CurrentMicrogame);
+                CurrentMicrogame.OnMicrogameEnd += OnMicrogameEnd;
+                OnMicrogameCreate?.Invoke(CurrentMicrogame);
             }
+
+            OnMicrogameTimeLeftChange?.Invoke(CurrentMicrogame?.TimeLeft, value?.TimeLeft);
         }
     }
 
@@ -104,6 +106,54 @@ public class GameController : MonoBehaviour
     private void PropagateTimeLeftChange(float previous, float current) {
         OnMicrogameTimeLeftChange?.Invoke(previous, current);
     }
+
+    private void OnMicrogameEnd(MicrogameController microgame) {
+        Debug.Assert(microgame != null);
+        if(microgame.MicrogameResults()) {
+            Score += 1;
+        }
+        else {
+            Lives -= 1;
+        }
+        CurrentMicrogame = null;
+        StartCoroutine("SpinTheWheel");
+    }
+
+    private MicrogameController displayedMicrogame;
+
+    public delegate void OnDisplayedMicrogameChangeHandler(MicrogameController previous, MicrogameController current);
+    public event OnDisplayedMicrogameChangeHandler OnDisplayedMicrogameChange;
+    public MicrogameController DisplayedMicrogame {
+        get {
+            return displayedMicrogame;
+        }
+        set {
+            OnDisplayedMicrogameChange?.Invoke(displayedMicrogame, value);
+            displayedMicrogame = value;
+        }
+    }
+
+    [Header("Wheel Settings")]
+    public float wheelSelectionDelay = 0.1f;
+    public float wheelSelectionTime = 2f;
+    public float wheelDisplayTime = 2f;
+
+    IEnumerator SpinTheWheel() {
+        float timePassed = 0f;
+        while(timePassed < wheelSelectionTime) {
+            DisplayedMicrogame = GetRandomMicrogame();
+            yield return new WaitForSeconds(wheelSelectionDelay);
+            timePassed += wheelSelectionDelay;
+        }
+        DisplayedMicrogame = GetRandomMicrogame();
+        yield return new WaitForSeconds(wheelDisplayTime);
+        CurrentMicrogame = DisplayedMicrogame;
+    }
+
+    public MicrogameController GetRandomMicrogame() {
+        Debug.Assert(microgames.Count > 0);
+        return microgames.PickRandom();
+    }  
 
     private void Awake() {
         camera = Camera.main;
@@ -117,19 +167,7 @@ public class GameController : MonoBehaviour
         CurrentMicrogame = null;
         // Notify the TimePanel of the starting status
         OnMicrogameTimeLeftChange?.Invoke(null, null);
-    }
 
-    private void CheckMicrogameResults(MicrogameController microgame) {
-        Debug.Assert(microgame != null);
-        if(microgame.MicrogameResults()) {
-            Score += 1;
-        }
-        else {
-            Lives -= 1;
-        }
-    }
-
-    private MicrogameController GetRandomMicrogame() {
-        return microgames.PickRandom();
+        StartCoroutine("SpinTheWheel");
     }
 }
