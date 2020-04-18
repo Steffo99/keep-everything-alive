@@ -12,6 +12,9 @@ public class LivesPanel : MonoBehaviour
     public Sprite lifeFull;
     [BeforeStart]
     public Sprite lifeEmpty;
+    [BeforeStart]
+    public float livesImagesGap = 0f;
+
     private Image[] livesImages;
 
     private void Awake() {
@@ -24,7 +27,8 @@ public class LivesPanel : MonoBehaviour
         for(int i = 0; i < gameController.maxLives; i++) {
             Image created = Instantiate(lifeImagePrefab.gameObject, transform).GetComponent<Image>();
             livesImages[i] = created;
-            created.rectTransform.anchoredPosition = new Vector2(i * created.rectTransform.rect.width, 0);
+            created.name = "Life #" + i.ToString();
+            created.rectTransform.anchoredPosition = new Vector2(-i * (created.rectTransform.rect.width + livesImagesGap), 0);
         }
     }
 

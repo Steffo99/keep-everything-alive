@@ -50,5 +50,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeImagePrefab: {fileID: 3435578480793479132, guid: 00b907367b670304f993e94eb1a9d4c2,
     type: 3}
-  lifeFull: {fileID: 21300000, guid: 99105f4799d793046a16750012838841, type: 3}
-  lifeEmpty: {fileID: 21300000, guid: ef7ed34112a1c2e479e57254695e6e49, type: 3}
+  lifeFull: {fileID: 21300000, guid: fc3a2bfc205f4934bbe9b6731864f902, type: 3}
+  lifeEmpty: {fileID: 21300000, guid: 14110adfd90d7c64188cbd99eb444d7d, type: 3}

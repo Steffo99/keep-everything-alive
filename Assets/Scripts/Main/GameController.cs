@@ -84,15 +84,15 @@ public class GameController : MonoBehaviour
             return currentMicrogame;
         }
         set {
-            if(value == null) {
+            OnMicrogameTimeLeftChange?.Invoke(CurrentMicrogame?.TimeLeft, value?.TimeLeft);
+            
+            if(CurrentMicrogame != null) {
                 OnMicrogameEnd?.Invoke(CurrentMicrogame);
-                OnMicrogameTimeLeftChange?.Invoke(CurrentMicrogame.TimeLeft, null);
                 CurrentMicrogame.OnTimeLeftChange -= PropagateTimeLeftChange;
                 Destroy(CurrentMicrogame.gameObject);
             }
-            else {
+            if(value != null) {
                 currentMicrogame = Instantiate(value.gameObject, transform).GetComponent<MicrogameController>();
-                OnMicrogameTimeLeftChange?.Invoke(null, CurrentMicrogame.TimeLeft);
                 CurrentMicrogame.OnTimeLeftChange += PropagateTimeLeftChange;
                 OnMicrogameStart?.Invoke(CurrentMicrogame);
             }
@@ -110,10 +110,13 @@ public class GameController : MonoBehaviour
     }
 
     private void Start() {
-        Lives = 4;
-        Timescale = 1.0f;
-        Difficulty = 1;
-        currentMicrogame = null;
+        Lives = startingLives;
+        Timescale = startingTimescale;
+        Difficulty = startingDifficulty;
+        Score = startingScore;
+        CurrentMicrogame = null;
+        // Notify the TimePanel of the starting status
+        OnMicrogameTimeLeftChange?.Invoke(null, null);
     }
 
     private void CheckMicrogameResults(MicrogameController microgame) {

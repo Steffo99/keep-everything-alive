@@ -639,10 +639,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 99bca92e-187d-494f-88a1-2367f515f6fb
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: LD46
+  organizationId: stefano-pigozzi
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

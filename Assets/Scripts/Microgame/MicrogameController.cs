@@ -19,9 +19,15 @@ public abstract class MicrogameController : MonoBehaviour
         }
     }
 
+    public float TimeFraction {
+        get { 
+            return startingTime / timeLeft;
+        }
+    }
+
     public abstract bool MicrogameResults();
 
     private void Update() {
-        TimeLeft -= Time.deltaTime;
+        TimeLeft = Mathf.Clamp(TimeLeft - Time.deltaTime, 0, Mathf.Infinity);
     }
 }
