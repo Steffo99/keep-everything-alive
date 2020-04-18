@@ -2,6 +2,8 @@
 {
     Properties
     {
+        _Brightness ("Brightness", Range(0.0, 1.0)) = 0.1
+        _Multiplier ("Multiplier", Float) = 11111.1
     }
     SubShader
     {
@@ -15,6 +17,9 @@
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+
+            float _Brightness;
+            float _Multiplier;
 
             struct appdata
             {
@@ -39,13 +44,13 @@
             sampler2D _MainTex;
 
             float random(float2 coordinates) {
-                return frac(sin(dot(coordinates, float2(231.231f, _Time.y))) * 11111.1f);
+                return frac(sin(dot(coordinates, float2(_Time.x + 1, _Time.y + 1))) * _Multiplier);
             }
 
             float4 frag (v2f i) : SV_Target
             {
-                float r = random(i.vertex.xy);
-                return float4(r, r, r, 1.0f);
+                float r = random(i.vertex.xy) * _Brightness;
+                return float4(r, r, r, 1.0);
             }
             ENDCG
         }
