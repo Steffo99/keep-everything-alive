@@ -16,6 +16,9 @@ public abstract class MicrogameController : MonoBehaviour
     [BeforeStart]
     public Font microgameNameFont;
 
+    [Header("Microgame Results")]
+    public bool victory = true;
+
     protected GameController gameController;
 
     public delegate void OnTimeLeftChangeHandler(float previous, float current);
@@ -44,8 +47,6 @@ public abstract class MicrogameController : MonoBehaviour
     public delegate void OnMicrogameEndHandler(MicrogameController microgame, bool victory);
     public event OnMicrogameEndHandler OnMicrogameEnd;
 
-    protected abstract bool MicrogameResults();
-
     private void Awake() {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
@@ -56,7 +57,7 @@ public abstract class MicrogameController : MonoBehaviour
     }
 
     private void End() {
-        OnMicrogameEnd?.Invoke(this, MicrogameResults());
+        OnMicrogameEnd?.Invoke(this, victory);
     }
 
     private void Update() {

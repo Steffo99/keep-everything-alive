@@ -28,6 +28,11 @@ public class GameController : MonoBehaviour
             }
         }
     }
+    public bool GameOver {
+        get {
+            return Lives <= 0;
+        }
+    }
 
     [BeforeStart]
     public float startingTimescale = 1.0f;
@@ -109,18 +114,21 @@ public class GameController : MonoBehaviour
 
     private void OnMicrogameEnd(MicrogameController microgame, bool victory) {
         Debug.Assert(microgame != null);
-        if(victory) {
-            Score += 1;
-        }
-        else {
+        if(!victory) {
             Lives -= 1;
         }
+        Score += 1;
         CurrentMicrogame = null;
-        Faster();
-        StartCoroutine("SpinTheWheel");
+        if(!GameOver) {
+            if(score % increaseSpeedEvery == 0) {
+                Faster();
+            }
+            StartCoroutine("SpinTheWheel");
+        }
     }
 
     public float timescaleIncreaseFactor = 0.05f;
+    public float increaseSpeedEvery = 5;
     private void Faster() {
         Timescale += timescaleIncreaseFactor;
     }
