@@ -1447,4 +1447,4 @@ MonoBehaviour:
     type: 3}
   min: {x: -9, y: -2}
   max: {x: 9, y: 0}
-  multiplier: 7
+  quantity: 7

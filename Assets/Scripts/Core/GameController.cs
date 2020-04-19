@@ -49,21 +49,6 @@ public class GameController : MonoBehaviour
     }
 
     [BeforeStart]
-    public int startingDifficulty = 1;
-    private int difficulty;
-    public delegate void OnDifficultyChangeHandler(int previous, int current);
-    public event OnDifficultyChangeHandler OnDifficultyChange;
-    public int Difficulty {
-        get {
-            return difficulty;
-        }
-        set {
-            OnDifficultyChange?.Invoke(Difficulty, value);
-            difficulty = value;
-        }
-    }
-
-    [BeforeStart]
     public int startingScore = 0;
     private int score;
     public delegate void OnScoreChangeHandler(int previous, int current);
@@ -180,7 +165,6 @@ public class GameController : MonoBehaviour
     private void Start() {
         Lives = startingLives;
         Timescale = startingTimescale;
-        Difficulty = startingDifficulty;
         Score = startingScore;
         CurrentMicrogame = null;
         // Notify the TimePanel of the starting status

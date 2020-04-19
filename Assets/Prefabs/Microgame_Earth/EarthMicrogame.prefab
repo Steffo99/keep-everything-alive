@@ -165,7 +165,7 @@ MonoBehaviour:
     type: 3}
   min: {x: -8.5, y: -4.5}
   max: {x: 8.5, y: 4.5}
-  multiplier: 4
+  quantity: 3
 --- !u!114 &-8358957742720386010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
     type: 3}
   min: {x: -8.5, y: -4.5}
   max: {x: 8.5, y: 4.5}
-  multiplier: 8
+  quantity: 8
 --- !u!1 &446180029092811516
 GameObject:
   m_ObjectHideFlags: 0
