@@ -428,6 +428,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 742014442006323161, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
+        type: 3}
+      propertyPath: microgames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 742014442006323161, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
+        type: 3}
+      propertyPath: microgames.Array.data[0]
+      value: 
+      objectReference: {fileID: 5248486291000105484, guid: 302761e08a5645541a8cd97ea48c40e8,
+        type: 3}
+    - target: {fileID: 742014442006323161, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
+        type: 3}
+      propertyPath: timescaleIncreaseFactor
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 742014442006323162, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
         type: 3}
       propertyPath: m_Name
@@ -571,11 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 914644881, guid: 83b3c042c2cf3ce4fafc6b3346509ad9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.9699707
       objectReference: {fileID: 0}
     - target: {fileID: 914644881, guid: 83b3c042c2cf3ce4fafc6b3346509ad9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 60.10321
       objectReference: {fileID: 0}
     - target: {fileID: 914644881, guid: 83b3c042c2cf3ce4fafc6b3346509ad9, type: 3}
       propertyPath: m_AnchorMin.x

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MicrogameController : MonoBehaviour
+public class MicrogameController : MonoBehaviour
 {
     [Header("Microgame Settings")]
     [BeforeStart]
