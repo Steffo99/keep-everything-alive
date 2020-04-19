@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestMicrogame : MicrogameController
 {
-    public override bool MicrogameResults() {
+    protected override bool MicrogameResults() {
         return true;
     }
 }

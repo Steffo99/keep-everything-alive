@@ -107,16 +107,22 @@ public class GameController : MonoBehaviour
         OnMicrogameTimeLeftChange?.Invoke(previous, current);
     }
 
-    private void OnMicrogameEnd(MicrogameController microgame) {
+    private void OnMicrogameEnd(MicrogameController microgame, bool victory) {
         Debug.Assert(microgame != null);
-        if(microgame.MicrogameResults()) {
+        if(victory) {
             Score += 1;
         }
         else {
             Lives -= 1;
         }
         CurrentMicrogame = null;
+        Faster();
         StartCoroutine("SpinTheWheel");
+    }
+
+    public float timescaleIncreaseFactor = 0.05f;
+    private void Faster() {
+        Timescale += timescaleIncreaseFactor;
     }
 
     private MicrogameController displayedMicrogame;
@@ -137,15 +143,19 @@ public class GameController : MonoBehaviour
     public float wheelSelectionDelay = 0.1f;
     public float wheelSelectionTime = 2f;
     public float wheelDisplayTime = 2f;
+    public AudioSource wheelClickAudioSource;
+    public AudioSource wheelBoopAudioSource;
 
     IEnumerator SpinTheWheel() {
         float timePassed = 0f;
         while(timePassed < wheelSelectionTime) {
             DisplayedMicrogame = GetRandomMicrogame();
+            wheelClickAudioSource.Play();
             yield return new WaitForSeconds(wheelSelectionDelay);
             timePassed += wheelSelectionDelay;
         }
         DisplayedMicrogame = GetRandomMicrogame();
+        wheelBoopAudioSource.Play();
         yield return new WaitForSeconds(wheelDisplayTime);
         CurrentMicrogame = DisplayedMicrogame;
     }

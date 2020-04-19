@@ -43,5 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f6067f11d26b446b444ebbc8c54b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  microgameName: TESTATA
   startingTime: 4
+  microgameName: URSELF
+  microgameNameColor: {r: 1, g: 0.3882353, b: 0.015686275, a: 1}
+  microgameNameFont: {fileID: 12800000, guid: 75c9cbfd49e877c468331f81fc132714, type: 3}

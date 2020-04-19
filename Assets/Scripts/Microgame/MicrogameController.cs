@@ -4,10 +4,19 @@ using UnityEngine;
 
 public abstract class MicrogameController : MonoBehaviour
 {
-    [BeforeStart]
-    public string microgameName = "[UNSET]";
+    [Header("Microgame Settings")]
     [BeforeStart]
     public float startingTime = 4f;
+
+    [Header("Wheel Settings")]
+    [BeforeStart]
+    public string microgameName;
+    [BeforeStart]
+    public Color microgameNameColor;
+    [BeforeStart]
+    public Font microgameNameFont;
+
+    protected GameController gameController;
 
     public delegate void OnTimeLeftChangeHandler(float previous, float current);
     public event OnTimeLeftChangeHandler OnTimeLeftChange;
@@ -32,10 +41,14 @@ public abstract class MicrogameController : MonoBehaviour
 
     public delegate void OnMicrogameStartHandler(MicrogameController microgame);
     public event OnMicrogameStartHandler OnMicrogameStart;
-    public delegate void OnMicrogameEndHandler(MicrogameController microgame);
+    public delegate void OnMicrogameEndHandler(MicrogameController microgame, bool victory);
     public event OnMicrogameEndHandler OnMicrogameEnd;
 
-    public abstract bool MicrogameResults();
+    protected abstract bool MicrogameResults();
+
+    private void Awake() {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
 
     private void Start() {
         timeLeft = startingTime;
@@ -43,7 +56,7 @@ public abstract class MicrogameController : MonoBehaviour
     }
 
     private void End() {
-        OnMicrogameEnd?.Invoke(this);
+        OnMicrogameEnd?.Invoke(this, MicrogameResults());
     }
 
     private void Update() {

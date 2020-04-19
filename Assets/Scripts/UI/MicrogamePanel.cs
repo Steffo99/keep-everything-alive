@@ -19,5 +19,7 @@ public class MicrogamePanel : MonoBehaviour
 
     private void OnDisplayedMicrogameChange(MicrogameController previous, MicrogameController current) {
         text.text = current.microgameName;
+        text.color = current.microgameNameColor;
+        text.font = current.microgameNameFont;
     }
 }

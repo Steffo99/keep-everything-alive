@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903729140753789853}
   - component: {fileID: 903729140753789852}
+  - component: {fileID: 548149272}
   m_Layer: 5
   m_Name: Lives Panel
   m_TagString: Untagged
@@ -52,3 +53,17 @@ MonoBehaviour:
     type: 3}
   lifeFull: {fileID: 21300000, guid: fc3a2bfc205f4934bbe9b6731864f902, type: 3}
   lifeEmpty: {fileID: 21300000, guid: 14110adfd90d7c64188cbd99eb444d7d, type: 3}
+  livesImagesGap: 12
+--- !u!114 &548149272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903729140753789854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed311aa263b18f4388ee281b1c72764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayWhen: 0

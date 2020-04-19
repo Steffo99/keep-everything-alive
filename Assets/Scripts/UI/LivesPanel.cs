@@ -34,7 +34,7 @@ public class LivesPanel : MonoBehaviour
 
     private void OnLivesChange(int previous, int current) {
         for(int i = 0; i < livesImages.Length; i++) {
-            if(i <= current) {
+            if(i < current) {
                 livesImages[i].sprite = lifeFull;
             }
             else {

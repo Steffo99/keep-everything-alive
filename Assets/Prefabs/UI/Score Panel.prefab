@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 943358902}
   - component: {fileID: 943358901}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,17 +58,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.27450982, g: 0.75686276, b: 0.52156866, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 51
+    m_Font: {fileID: 12800000, guid: 75c9cbfd49e877c468331f81fc132714, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 51
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99105f4799d793046a16750012838841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbf043ba8a6f2c341ad9db4d7e0f4b0a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -160,6 +160,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4957884999417998573}
   - component: {fileID: 4957884999417998579}
+  - component: {fileID: 3121501029723249967}
+  - component: {fileID: 3121501029723249969}
   m_Layer: 5
   m_Name: Score Panel
   m_TagString: Untagged
@@ -196,3 +198,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4957884999417998574}
   m_CullTransparentMesh: 0
+--- !u!114 &3121501029723249967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957884999417998574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e459f5818c0884ca089d91defc1409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3121501029723249969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957884999417998574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed311aa263b18f4388ee281b1c72764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayWhen: 0
