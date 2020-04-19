@@ -318,6 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63616322c82d5e64e8e7199d51c6a2ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  min: {x: -8.5, y: -4.5}
+  max: {x: 8.5, y: 4.5}
 --- !u!114 &446180029092811511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3942a3e38c32eed40bff470e6bbddf42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDelay: 0.7
+  activationDelay: 0.4
 --- !u!114 &446180029092811510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,4 +346,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
-  activationDelay: 0.7
+  activationDelay: 0.4
