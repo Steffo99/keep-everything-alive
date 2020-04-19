@@ -428,17 +428,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 742014442006323161, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
-        type: 3}
-      propertyPath: microgames.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 742014442006323161, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
-        type: 3}
-      propertyPath: microgames.Array.data[1]
-      value: 
-      objectReference: {fileID: 5248486291000105484, guid: 302761e08a5645541a8cd97ea48c40e8,
-        type: 3}
     - target: {fileID: 742014442006323162, guid: e2bb5f24fc04fd94fa7d6f04c3713df6,
         type: 3}
       propertyPath: m_Name

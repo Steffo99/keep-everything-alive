@@ -18,6 +18,10 @@ public class SoundPitchAdjust : MonoBehaviour
         gameController.OnSpeedChange += OnSpeedChange;
     }
 
+    private void OnDestroy() {
+        gameController.OnSpeedChange -= OnSpeedChange;
+    }
+
     private void OnSpeedChange(float previous, float current) {
         audioSource.pitch = current;
     }
