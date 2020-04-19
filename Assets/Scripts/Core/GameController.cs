@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -171,5 +172,13 @@ public class GameController : MonoBehaviour
         OnMicrogameTimeLeftChange?.Invoke(null, null);
 
         StartCoroutine("SpinTheWheel");
+    }
+
+    private void Update() {
+        if(GameOver) {
+            if(Input.anyKeyDown) {
+                SceneManager.LoadScene("Default");
+            }
+        }
     }
 }
