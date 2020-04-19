@@ -276,9 +276,9 @@ MonoBehaviour:
   startingDifficulty: 1
   startingScore: 0
   microgames:
-  - {fileID: 1798768979100361691, guid: 630cd222aaffefe4cb13161eeca7bf03, type: 3}
-  - {fileID: -1447348138257578213, guid: 4b285685b4a4a4c49ab075aaecba236e, type: 3}
+  - {fileID: 446180028923333666, guid: 69f9e1e67286d4e48951b2dd8a55a22b, type: 3}
   timescaleIncreaseFactor: 0.05
+  increaseSpeedEvery: 1
   wheelSelectionDelay: 0.05
   wheelSelectionTime: 2
   wheelDisplayTime: 2

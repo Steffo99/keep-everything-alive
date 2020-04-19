@@ -795,7 +795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5247441600368992340}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.85, y: -2.01, z: 0}
+  m_LocalPosition: {x: 6.65, y: -1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 5249343775018332958}
@@ -892,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3942a3e38c32eed40bff470e6bbddf42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activationDelay: 0.5
 --- !u!114 &5247441600368992343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
+  activationDelay: 0.5
 --- !u!1 &5247490226650109614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,7 +1391,7 @@ GameObject:
   - component: {fileID: 5248486291000105484}
   - component: {fileID: 5248486291000105487}
   m_Layer: 0
-  m_Name: Your Ship
+  m_Name: YourShipMicrogame
   m_TagString: MicrogameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,4 +1447,4 @@ MonoBehaviour:
     type: 3}
   min: {x: -9, y: -2}
   max: {x: 9, y: 0}
-  multiplier: 4
+  multiplier: 7
