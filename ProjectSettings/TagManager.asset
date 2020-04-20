@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - MicrogameController
+  - Sea
   layers:
   - Default
   - TransparentFX
