@@ -20,4 +20,8 @@ public class ScorePanel : MonoBehaviour
     private void OnScoreChange(int previous, int current) {
         text.text = current.ToString();
     }
+
+    private void OnEnable() {
+        text.text = gameController.Score.ToString();
+    }
 }
