@@ -290,6 +290,7 @@ MonoBehaviour:
   wheelDisplayTime: 2
   wheelClickAudioSource: {fileID: 5259517143936955431}
   wheelBoopAudioSource: {fileID: 934303053}
+  gameOverRequiredTime: 2.5
 --- !u!114 &1742300381
 MonoBehaviour:
   m_ObjectHideFlags: 0
