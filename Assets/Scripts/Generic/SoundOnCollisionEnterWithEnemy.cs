@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(AudioSource))]
-public class SoundOnCollisionWithEnemy : MonoBehaviour
+public class SoundOnCollisionEnterWithEnemy : MonoBehaviour
 {
     public float activationDelay = 0.5f;
 
@@ -12,7 +12,6 @@ public class SoundOnCollisionWithEnemy : MonoBehaviour
 
     private AudioSource audioSource;
     private bool active;
-
 
     void Awake()
     {
@@ -24,10 +23,9 @@ public class SoundOnCollisionWithEnemy : MonoBehaviour
         active = true;
     }
 
-    void OnTriggerStay2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == targetTag && active) {
             audioSource.Play();
-            active = false;
         }
     }
 }
