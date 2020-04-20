@@ -16,6 +16,7 @@ public class SoundPitchAdjust : MonoBehaviour
 
     private void Start() {
         gameController.OnSpeedChange += OnSpeedChange;
+        audioSource.pitch = gameController.Timescale;
     }
 
     private void OnDestroy() {

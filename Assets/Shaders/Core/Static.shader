@@ -44,7 +44,7 @@
             sampler2D _MainTex;
 
             float random(float2 coordinates) {
-                return frac(sin(dot(coordinates, float2(_Time.x + 1, _Time.y + 1))) * _Multiplier);
+                return frac(sin(dot(coordinates, float2(_Time.x + 2, _Time.y + 2))) * _Multiplier);
             }
 
             float4 frag (v2f i) : SV_Target

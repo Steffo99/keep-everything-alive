@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 675705036435195391}
   - component: {fileID: 9193405323030062394}
   - component: {fileID: 7545724276036421959}
+  - component: {fileID: 17471117187044127}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 99105f4799d793046a16750012838841, type: 3}
+  m_SortingOrder: -25
+  m_Sprite: {fileID: 21300000, guid: 78ef4e81743fabf44b1d87d8fd4c2dca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,11 +98,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1.3333334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -138,3 +139,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationDelay: 0
   mode: 0
+--- !u!114 &17471117187044127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62945270308557343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7c75bc4b2382240b73fc29f38eccca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: c387e11f6c5f6b848aafadb23fb524b2, type: 3}
+  - {fileID: 21300000, guid: aee6010ae116c3342b39953af6022f99, type: 3}
+  - {fileID: 21300000, guid: 78ef4e81743fabf44b1d87d8fd4c2dca, type: 3}

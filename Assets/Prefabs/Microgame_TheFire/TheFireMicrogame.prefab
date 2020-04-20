@@ -539,6 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8577801550627930792}
   - component: {fileID: 7028444477877117394}
+  - component: {fileID: 8096769495231441372}
   m_Layer: 0
   m_Name: Chop AudioSource
   m_TagString: Untagged
@@ -656,6 +657,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8096769495231441372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446766288317788380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1219c341d913e3e4e912d424f804a6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7114730320968502858
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4588558160523472135}
   - component: {fileID: 4204335899742077653}
+  - component: {fileID: 4221102089388529505}
   m_Layer: 0
   m_Name: Fall AudioSource
   m_TagString: Untagged
@@ -783,6 +797,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4221102089388529505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114730320968502858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1219c341d913e3e4e912d424f804a6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7555396340038919054
 GameObject:
   m_ObjectHideFlags: 0
