@@ -93,7 +93,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138a8f32353ffdc448fd9b1d859bbd3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredDestructions: 3
+  requiredDestructions: 5
+--- !u!114 &740996690935749476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567300151566380131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a368340a86dccd4490da935980af708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiate: {fileID: 2893628316312369057, guid: 5fecc9052b30b7a42985565cb8a09985,
+    type: 3}
+  min: {x: -6, y: 0}
+  max: {x: 6, y: 3}
+  quantity: 1
 --- !u!114 &930882956735802273
 MonoBehaviour:
   m_ObjectHideFlags: 0
