@@ -168,15 +168,20 @@ public class GameController : MonoBehaviour
         Timescale = startingTimescale;
         Score = startingScore;
         CurrentMicrogame = null;
+        gameOverTimer = 0f;
         // Notify the TimePanel of the starting status
         OnMicrogameTimeLeftChange?.Invoke(null, null);
 
         StartCoroutine("SpinTheWheel");
     }
 
+    public float gameOverRequiredTime = 4f;
+    private float gameOverTimer = 0f;
+
     private void Update() {
         if(GameOver) {
-            if(Input.anyKeyDown) {
+            gameOverTimer += Time.unscaledDeltaTime;
+            if(gameOverTimer >= gameOverRequiredTime && Input.anyKeyDown) {
                 SceneManager.LoadScene("Default");
             }
         }
