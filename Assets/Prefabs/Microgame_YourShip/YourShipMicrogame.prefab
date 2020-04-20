@@ -231,7 +231,7 @@ MonoBehaviour:
     type: 3}
   min: {x: -9, y: -2}
   max: {x: 9, y: 0}
-  quantity: 7
+  quantity: 6
 --- !u!1001 &968561210557217824
 PrefabInstance:
   m_ObjectHideFlags: 0

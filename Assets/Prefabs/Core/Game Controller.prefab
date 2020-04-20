@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 742014442006323160}
   - component: {fileID: 742014442006323161}
   - component: {fileID: 1742300381}
+  - component: {fileID: 6267330545836698810}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: GameController
@@ -281,6 +282,7 @@ MonoBehaviour:
   - {fileID: 3409115008165862035, guid: 90d329297da61224c92fd77199701cd1, type: 3}
   - {fileID: 7358435626629551717, guid: 09e42d58b5d17a54cb4b5baf346d3bca, type: 3}
   - {fileID: 5104398782453143819, guid: f7171f4420932ca4db8a470933a4e668, type: 3}
+  - {fileID: 2461340472008836778, guid: d2f96d0ff6932534d9982010ba493966, type: 3}
   timescaleIncreaseFactor: 0.04
   increaseSpeedEvery: 1
   wheelSelectionDelay: 0.05
@@ -302,6 +304,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleKey: 283
   target: {fileID: 0}
+--- !u!114 &6267330545836698810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742014442006323162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253488c5c04f3a347bb9d5422ed5bc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitKey: 27
+  holdTimeRequired: 1
 --- !u!1 &839116773049434249
 GameObject:
   m_ObjectHideFlags: 0
