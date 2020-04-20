@@ -278,6 +278,7 @@ MonoBehaviour:
   - {fileID: 446180028923333666, guid: 69f9e1e67286d4e48951b2dd8a55a22b, type: 3}
   - {fileID: 5248486291000105484, guid: 302761e08a5645541a8cd97ea48c40e8, type: 3}
   - {fileID: 3409115008165862035, guid: 90d329297da61224c92fd77199701cd1, type: 3}
+  - {fileID: 7358435626629551717, guid: 09e42d58b5d17a54cb4b5baf346d3bca, type: 3}
   timescaleIncreaseFactor: 0.05
   increaseSpeedEvery: 1
   wheelSelectionDelay: 0.05

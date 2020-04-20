@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FailOnCollision : MonoBehaviour
+[RequireComponent(typeof(SpriteRenderer))]
+public class RecolorOnCollisionWithEnemy : MonoBehaviour
 {
+    public Color color;
     public float activationDelay = 0.5f;
 
-    private MicrogameController microgameController;
+    private SpriteRenderer spriteRenderer;
     private bool active;
 
     void Awake()
     {
-        microgameController = GameObject.FindGameObjectWithTag("MicrogameController").GetComponent<MicrogameController>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         Invoke("Activate", activationDelay);
     }
-
+    
     void Activate() {
         active = true;
     }
 
     void OnTriggerStay2D(Collider2D other) {
         if(other.tag == "Enemy" && active) {
-            microgameController.victory = false;
+            spriteRenderer.color = color;
         }
     }
 }

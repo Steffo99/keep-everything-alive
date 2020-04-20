@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class BackgroundShuffle : MonoBehaviour
+public class RandomSpriteOnStart : MonoBehaviour
 {
-    public List<Sprite> backgrounds;
+    public List<Sprite> sprites;
     
     private SpriteRenderer spriteRenderer;
 
@@ -15,6 +15,6 @@ public class BackgroundShuffle : MonoBehaviour
     }
 
     void Start() {
-        spriteRenderer.sprite = backgrounds.PickRandom();
+        spriteRenderer.sprite = sprites.PickRandom();
     }
 }
