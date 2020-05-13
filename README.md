@@ -4,14 +4,15 @@ _A lively microgame collection_
 
 ## Ludum Dare 46: Jam Entry
 
-[![](https://img.shields.io/badge/overall-TBD-lightgrey) 
-![](https://img.shields.io/badge/fun-TBD-lightgrey) 
-![](https://img.shields.io/badge/innovation-TBD-lightgrey) 
-![](https://img.shields.io/badge/theme-TBD-lightgrey) 
-![](https://img.shields.io/badge/graphics-TBD-lightgrey) 
-![](https://img.shields.io/badge/audio-TBD-lightgrey) 
-![](https://img.shields.io/badge/humor-TBD-lightgrey)
-![](https://img.shields.io/badge/mood-TBD-lightgrey)](https://ldjam.com/events/ludum-dare/46/keep-everything-alive-1)
+[
+![](https://img.shields.io/badge/overall-3.8-yellowgreen) 
+![](https://img.shields.io/badge/fun-3.8-yellowgreen) 
+![](https://img.shields.io/badge/innovation-3.7-yellowgreen) 
+![](https://img.shields.io/badge/theme-★%209th-brightgreen) 
+![](https://img.shields.io/badge/graphics-3.6-yellowgreen)
+![](https://img.shields.io/badge/humor-4.0-green)
+![](https://img.shields.io/badge/mood-3.4-yellowgreen)
+](https://ldjam.com/events/ludum-dare/46/keep-everything-alive-1)
 
 ## About
 
