@@ -1,18 +1,16 @@
+<div align="center">
+
 # Keep Everything Alive
 
 _A lively microgame collection_
 
-## Ludum Dare 46: Jam Entry
+</div>
 
-[
-![](https://img.shields.io/badge/overall-3.8-yellowgreen) 
-![](https://img.shields.io/badge/fun-3.8-yellowgreen) 
-![](https://img.shields.io/badge/innovation-3.7-yellowgreen) 
-![](https://img.shields.io/badge/theme-★%209th-brightgreen) 
-![](https://img.shields.io/badge/graphics-3.6-yellowgreen)
-![](https://img.shields.io/badge/humor-4.0-green)
-![](https://img.shields.io/badge/mood-3.4-yellowgreen)
-](https://ldjam.com/events/ludum-dare/46/keep-everything-alive-1)
+## Links
+
+[![Ludum Dare 46 Jam](https://img.shields.io/badge/ludum_dare_46-jam-%23ee5533)](https://ldjam.com/events/ludum-dare/46/keep-everything-alive-1)
+ 
+[![Published on Itch.io](https://img.shields.io/badge/itch.io-published-%2390ce59)](https://steffo.itch.io/keep-everything-alive)
 
 ## About
 
