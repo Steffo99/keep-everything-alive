@@ -1,6 +1,6 @@
 <div align="center">
 
-# Keep Everything Alive
+# ![Keep Everything Alive](./Assets/Sprites/Media/itchbanner.png)
 
 _A lively microgame collection_
 
